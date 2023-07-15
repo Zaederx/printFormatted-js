@@ -1,0 +1,29 @@
+{
+  "name": "printformatted-js",
+  "version": "1.0.0",
+  "description": "A simple way to give coloured formatting to the text output in node.js",
+  "main": "js/printFormatted.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaederx/printFormatted-js.git"
+  },
+  "keywords": [
+    "node",
+    "print",
+    "formatted",
+    "colour",
+    "color",
+    "green",
+    "text",
+    "text"
+  ],
+  "author": "Zachary Ishmael",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Zaederx/printFormatted-js/issues"
+  },
+  "homepage": "https://github.com/Zaederx/printFormatted-js#readme"
+}
