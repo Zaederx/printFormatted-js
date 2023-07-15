@@ -33,6 +33,7 @@ function stringFormatting(colour:colour, args:number)
 /**
  * A function for printing console output with colour in Node.js terminal
  * @param colour a colour to be used for the ouput (one of six to choose from)
+ * - 'green' | 'red' | 'yellow' | 'white' | 'black' | 'blue'
  * @param args an indeterminate amount of string arguments
  */
 export function printFormatted(colour:colour, ...args:any[]) {
