@@ -4,6 +4,7 @@
   "description": "A simple way to give coloured formatting to the text output in node.js",
   "main": "js/printFormatted.js",
   "scripts": {
+    "tsc": "tsc",
     "test": "test"
   },
   "repository": {
@@ -25,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/Zaederx/printFormatted-js/issues"
   },
-  "homepage": "https://github.com/Zaederx/printFormatted-js#readme"
+  "homepage": "https://github.com/Zaederx/printFormatted-js#readme",
+  "dependencies": {
+    "typescript": "^5.1.6"
+  }
 }
