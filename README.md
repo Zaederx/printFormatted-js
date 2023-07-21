@@ -13,5 +13,5 @@ outputs all the text given in one of the 6 specified colours:
 'green' | 'red' | 'yellow' | 'white' | 'black' | 'blue'
 
 
-#Note:
+# Note:
 Grateful to colou console js for knowing what colour codes could be used for various colours see [link](https://gist.github.com/abritinthebay/d80eb99b2726c83feb0d97eab95206c4)].
