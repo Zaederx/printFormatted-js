@@ -4,6 +4,10 @@
 
 Usage:
 ```
+npm install printformatted-js
+```
+```
+import 'printFormatted' from 'printformatted-js'
 printFormatted('green', string1, string2, stringEtc)
 ```
 outputs all the text given in one of the 6 specified colours:
