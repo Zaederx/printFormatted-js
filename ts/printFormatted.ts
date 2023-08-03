@@ -6,10 +6,46 @@ export const terminalColourWhite = '\x1b[37m' // white for regular - just a regu
 export const terminalColourBlack = '\x1b[30m' // black if regular if using a light terminal
 export const terminalColourBlue = '\x1b[34m' // blue for mark a function being called
 
+//CSS COLOURS
+export const hexColourGreen = '#019c00'
+export const hexColourRed = '#e20000'
+export const hexColourYellow = '#e2ad00'
+export const hexColourWhite = '#ffffff'
+export const hexColourBlack =  '#000000'
+export const hexColourBlue = '#0000fc'
+
 type colour = 'green'|'red'|'yellow'|'white'|'black'|'blue'
 // export const stringFormatting = terminalColourGreen+'%s%s\x1b[0m'
 
-function stringFormatting(colour:colour, args:number)
+
+/**
+ * @param colour the colour that you want the output to be
+ * @param args the number of string arguments
+ */
+function jsConsoleFormatting(colour:colour, args:number):[string,string]
+{
+    var stringFormatting = '%c'
+    var css = 'color:'
+    switch (colour) {
+        case 'green': css += hexColourGreen; break;
+        case 'red' : css += hexColourRed; break;
+        case 'yellow': css += hexColourYellow; break;
+        case 'white': css += hexColourWhite; break;
+        case 'black' : css += hexColourBlack; break;
+        case 'blue' : css += hexColourBlue; break;
+    }
+    for(var i = 0; i < args; i++) {
+        stringFormatting += '%s'//number of string arguments
+    }
+    return [stringFormatting, css];
+}
+
+/**
+ * 
+ * @param colour the colour that you want it to be
+ * @param args the number of arguments that you have
+ */
+function nodeTerminalFormatting(colour:colour,args:number)
 {
     var stringFormatting = ''
     switch (colour) {
@@ -37,6 +73,27 @@ function stringFormatting(colour:colour, args:number)
  * @param args an indeterminate amount of string arguments
  */
 export function printFormatted(colour:colour, ...args:any[]) {
-    const formatting = stringFormatting(colour, args.length)
+    const formatting = nodeTerminalFormatting(colour, args.length)
     console.log(formatting,...args)
+}
+/**
+ * Function for printing either to node console (using node string formatting) or regular browser console (using css)
+ * @param node whether you are printing to node console (true) or not (browser console console - false)
+ * @param trace  whether to print a stack trace of where the function was called from
+ * @param colour 
+ * @param args 
+ */
+export function printFormattedv2(node:boolean, trace:boolean, colour:colour, ...args:any[])
+{
+    trace ? console.trace() : null
+    if (node) 
+    {
+        var formatting = nodeTerminalFormatting(colour, args.length)
+        console.log(formatting,...args)
+    }
+    else
+    {
+        var [stringFormatting, css] = jsConsoleFormatting(colour, args.length)
+        console.log(stringFormatting,css,...args)
+    }
 }

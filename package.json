@@ -1,12 +1,12 @@
 {
   "name": "printformatted-js",
-  "version": "1.0.4",
+  "version": "2.0.8",
   "description": "A simple way to give coloured formatting to the text output in node.js",
   "main": "js/printFormatted.js",
   "type": "module",
   "scripts": {
     "tsc": "tsc",
-    "test": "test"
+    "test": "tsc && node js/test.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
     "colour",
     "color",
     "green",
-    "text",
     "text"
   ],
   "author": "Zachary Ishmael",
