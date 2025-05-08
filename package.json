@@ -1,9 +1,8 @@
 {
   "name": "printformatted-js",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "description": "A simple way to give coloured formatting to the text output in node.js",
   "main": "js/printFormatted.js",
-  "type": "module",
   "scripts": {
     "tsc": "tsc",
     "test": "tsc && node js/test.js"
